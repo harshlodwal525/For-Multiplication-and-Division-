@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>MUL DIV</title>
+
+    <script>
+
+        function add() {
+            var a = parseFloat(document.getElementById('1').value);
+            var b = parseFloat(document.getElementById('2').value);
+
+            var c = document.getElementById('select').value;
+
+
+            if (c === '/') {
+                document.getElementById('3').value = a / b;
+            }
+
+            if (c === '*') {
+                document.getElementById('3').value = a * b;
+            }
+        }
+
+    </script>
+
+</head>
+<div>ENTER TWO VALUES TO PERFROM OPRETION</div>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td> First value</td>
+                <td><input type="number" id="1" /></td>
+            </tr>
+
+            <tr>
+                <td> Second value</td>
+                <td> <input type="number" id="2" /></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="select">
+                        <option value="*">Multiply</option>
+                        <option value="/">Divide</option>
+                        
+                    </select>
+                </td>
+                <td><button onclick="add();">Submit</button></td>
+            </tr>
+
+            <tr>
+                <td> OUTPUT </td>
+                <td>
+                    <input type="text" id="3" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
